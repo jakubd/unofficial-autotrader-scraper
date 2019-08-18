@@ -12,6 +12,6 @@ one previous owner.
 
 I originally made this program in order to find trends in used car postings in my area as well as to satisfy my basic
 safety requirements in a vehicle.  However I ended up abandoning this project entirely. The fact that insurance claims are 
-often obscured from non commercialized source interfaces (ie carfax) basically leads to a hidden variable that explains
-most "good price" used vehicles. Additionally I noticed that all high volume official dealerships in my area did not 
+often obscured from non commercialized interfaces (ie carfax) basically leads to a hidden variable that explains
+most "well priced" used vehicles I have found. I also noticed that all high volume official dealerships in my area did not 
 use autotrader.  
