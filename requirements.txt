@@ -1,0 +1,6 @@
+beautifulsoup4
+dataset
+pytest
+requests
+tabulate
+sqlalchemy
