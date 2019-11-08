@@ -1,0 +1,1 @@
+Some sample SQL queries to begin looking through the cars data.
