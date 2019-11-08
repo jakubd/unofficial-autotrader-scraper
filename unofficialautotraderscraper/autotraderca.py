@@ -496,9 +496,9 @@ def db_write_for_search_query_url(given_url, sqlite_fn="cars.db", timeout=0.0):
         table.insert(this_result, types={"mileage": Integer})
 
 
-if __name__ == "__main__":
-    start = time.time()
-    db_write_for_search_query_url(query_to_search_url(results_per_page=10000), timeout=0.5)
-    end = time.time()
-    print("done in %00f sec." % (end-start))
+# if __name__ == "__main__":
+#     start = time.time()
+#     db_write_for_search_query_url(query_to_search_url(results_per_page=10000), timeout=0.5)
+#     end = time.time()
+#     print("done in %00f sec." % (end-start))
 
