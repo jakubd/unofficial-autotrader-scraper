@@ -5,8 +5,8 @@ This program will scrape the `autotrader.ca` website and dump some general infor
 to a Sqlite database.  This will include things that are typically not contained in the search parameters
 of the site.  For example you can order by dealer to plan visiting as many as you can in one trip.  
 
-Data captured includes model, car brand, price, mileage.  It tries some fuzzy terms in order to determine
-whether the vehicle posted has a backup camera, has ABS and whether the seller mentions that there is only 
+Data captured includes model, car brand, price, mileage, market value assessment.  It tries some fuzzy terms in order 
+to determine whether the vehicle posted has a backup camera, has ABS and whether the seller mentions that there is only 
 one previous owner.
 
 I originally made this program in order to find trends in used car postings in my area as well as to satisfy my basic
