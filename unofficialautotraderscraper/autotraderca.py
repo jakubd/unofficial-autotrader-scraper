@@ -10,6 +10,7 @@ from sqlalchemy.types import Integer
 from string import Template
 from tabulate import tabulate
 from urllib.parse import quote
+from yaspin import yaspin
 
 
 def query_to_search_url(results_per_page=15, result_offset=0, sort_value=9, price_range="500,13000",
@@ -474,7 +475,7 @@ def db_get_last_runid(sqlite_fn="cars.db"):
                         return v
     return 0
 
-
+@yaspin(text="Fetching results now (this may take a while)...")
 def db_write_for_search_query_url(given_url, sqlite_fn="cars.db", timeout=0.0):
     """
     Given a search query URL, print all details to a given sqlite file
@@ -494,11 +495,4 @@ def db_write_for_search_query_url(given_url, sqlite_fn="cars.db", timeout=0.0):
         this_result["runid"] = last_run_id+1
         this_result["run_on"] = run_on
         table.insert(this_result, types={"mileage": Integer})
-
-
-# if __name__ == "__main__":
-#     start = time.time()
-#     db_write_for_search_query_url(query_to_search_url(results_per_page=10000), timeout=0.5)
-#     end = time.time()
-#     print("done in %00f sec." % (end-start))
 

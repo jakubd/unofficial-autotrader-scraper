@@ -51,7 +51,8 @@ at_query = query_to_search_url(results_per_page=10000, price_range=args.price,
                                mileage_range=args.mileage, distance_from_me=args.distance,
                                postal=args.location, transmission=transmission, car_status="New-Used")
 
-
+print("performing initial query to: %s" % at_query)
+print("")
 db_write_for_search_query_url(at_query, timeout=0.5, sqlite_fn=args.output)
 
 def stub():
