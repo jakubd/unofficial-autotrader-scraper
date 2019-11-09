@@ -30,6 +30,9 @@ def query_to_search_url(results_per_page=15, result_offset=0, sort_value=9, pric
     :param car_status: Whether to get new or used
     :return: string af a search
     """
+    price_range = price_range.replace("-", ",")
+    mileage_range = mileage_range.replace("-", ",")
+
     at_search_template = Template(
         "https://www.autotrader.ca/cars/on/toronto/?"
         + "rcp=$results_per_page&"
@@ -73,7 +76,10 @@ def url_to_content(given_url):
         'User-Agent': 'Google Chrome Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36.',
     }
 
-    r = requests.get(given_url, headers=headers)
+    try:
+        r = requests.get(given_url, headers=headers)
+    except requests.exceptions.ConnectionError:
+        return ""
 
     if r.status_code == 200:
         try:

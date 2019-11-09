@@ -29,13 +29,13 @@ Simply run
 
 # Usage
 
-Let us say you live around the postal code M5Q2W2 and want a Manual transmission car priced from 600-700 dollars 
+Let us say you live around the postal code M5Q2W2 and want a Manual transmission car priced from 600-3000 dollars 
 and want to create a mycars.db output file.
 
 Simply type into terminal:
 
 ```
-atscrape -mt -p 600-700 -l M5Q2W2 -o mycars.db
+atscrape -mt -p 600-3000 -l M5Q2W2 -o mycars.db
 ```
 
 and after it fetches the results (which can take some time) you will have a `mycars.db` SQLite database with all 
@@ -45,7 +45,7 @@ of the details.
 
 An example of the output data would look like this:
 
-![img/cliscreen.png](img/cliscreen.png)
+![img/cliscreen.png](img/db.png)
 
 There is a sample of scripts you can run in the `sql` directory against the database.
 
