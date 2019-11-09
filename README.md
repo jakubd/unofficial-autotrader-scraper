@@ -45,7 +45,8 @@ of the details.
 
 An example of the output data would look like this:
 
-![img/cliscreen.png](img/db.png)
+**click to enlarge**
+![img/db.png](img/db.png)
 
 There is a sample of scripts you can run in the `sql` directory against the database.
 
